@@ -1,7 +1,8 @@
+
 #!/bin/sh
 set -e
 
-/usr/bin/dockerd \
+/usr/local/bin/dockerd \
 	--host=unix:///var/run/docker.sock \
 	--host=tcp://0.0.0.0:2375 \
 	--data-root=/efs
