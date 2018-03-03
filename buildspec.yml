@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - docker login -u $USERNAME -p $PASSWORD
+  build:
+    commands:
+      - docker build -t $IMAGE_REPO_NAME .
+  post_build:
+    commands:
+      - docker push $IMAGE_REPO_NAME
