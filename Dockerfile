@@ -77,7 +77,8 @@ RUN wget "https://bootstrap.pypa.io/get-pip.py" -O /tmp/get-pip.py \
     && pip install awscli==1.11.157 \
     && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-VOLUME /var/lib/docker
+RUN mkdir /efs
+VOLUME /efs
 
 COPY dockerd-entrypoint.sh /usr/local/bin/
 
