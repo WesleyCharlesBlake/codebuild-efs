@@ -10,7 +10,7 @@ mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=
 /usr/local/bin/dockerd \
 	--host=unix:///var/run/docker.sock \
 	--host=tcp://0.0.0.0:2375 \
-	--data-root=/efs
+	--data-root=/efs \
 	--storage-driver=overlay &>/var/log/docker.log &
 
 
