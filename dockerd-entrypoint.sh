@@ -2,4 +2,5 @@
 set -e
 
 /usr/bin/dockerd  \
-	--data-root=/efs &>/var/log/docker.log &
+	--data-root=/efs \
+	--storage-driver=overlay2 &>/var/log/docker.log &
